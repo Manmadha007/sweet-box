@@ -1,5 +1,12 @@
-a new file
+pipeline {
+    agent any
 
-
-
-a new line craeted
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+                git branch: 'main', url: 'https://github.com/Manmadha007/sweet-box.git'
+            }
+        }
+    }
+}
